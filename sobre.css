@@ -699,6 +699,35 @@ button {
     }
 
     .menu {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px 20px;
+        background: var(--branco);
+        border-bottom: 1px solid var(--borda);
+        box-shadow: var(--sombra);
+        z-index: 999;
+    }
+
+    .menu.menu-aberto {
+        display: flex;
+    }
+
+    .menu a {
+        display: block;
+        width: 100%;
+        padding: 16px 5px;
+        border-bottom: 1px solid var(--borda);
+        color: var(--azul);
+    }
+
+    .menu a::after {
         display: none;
     }
 
@@ -708,6 +737,21 @@ button {
 
     .menu-mobile {
         display: flex;
+        position: relative;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--borda);
+        background: var(--branco);
+        color: var(--azul);
+        cursor: pointer;
+        font-size: 18px;
+        z-index: 1001;
+    }
+
+    .menu-mobile i {
+        pointer-events: none;
     }
 
     .sobre-hero {
