@@ -947,15 +947,22 @@ button {
         height: 76px;
     }
 
+    .header-container {
+        position: relative;
+        gap: 10px;
+    }
+
     .logo img {
         width: 110px;
     }
 
-    .menu {
-        position: absolute;
+    /* MENU MOBILE */
 
+    .menu {
+        position: fixed;
         top: 76px;
         left: 0;
+        right: 0;
 
         width: 100%;
 
@@ -972,34 +979,79 @@ button {
         border-bottom: 1px solid var(--borda);
 
         box-shadow: var(--sombra);
+
+        z-index: 999;
     }
 
-    .menu.menu-aberto {
+    .menu.aberto {
         display: flex;
     }
 
     .menu a {
-        padding: 14px 5px;
+        display: block;
+        width: 100%;
+
+        padding: 16px 5px;
 
         border-bottom: 1px solid var(--borda);
+
+        color: var(--azul);
     }
 
     .menu a::after {
         display: none;
     }
 
+    /* BOTÃO SOLICITAR ORÇAMENTO */
+
     .btn-header {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        padding: 10px 13px;
+
+        background: var(--azul);
+        color: var(--branco);
+
+        border-radius: 5px;
+
+        font-size: 11px;
+        font-weight: 700;
+
+        white-space: nowrap;
+
         margin-left: auto;
-
-        padding: 10px 14px;
     }
 
-    .btn-header span {
-        display: none;
-    }
+    /* BOTÃO MENU */
 
     .menu-mobile {
         display: flex;
+
+        position: relative;
+
+        width: 44px;
+        height: 44px;
+
+        align-items: center;
+        justify-content: center;
+
+        background: var(--azul);
+        color: var(--branco);
+
+        border-radius: 5px;
+
+        font-size: 18px;
+
+        z-index: 1001;
+    }
+
+    .menu-mobile i {
+        pointer-events: none;
     }
 
 
@@ -1061,7 +1113,6 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
     }
-
 }
 
 
@@ -1077,10 +1128,6 @@ button {
 
     .header-container {
         gap: 10px;
-    }
-
-    .btn-header {
-        display: none;
     }
 
     .hero {
