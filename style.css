@@ -974,7 +974,7 @@ button {
         box-shadow: var(--sombra);
     }
 
-    .menu.aberto {
+    .menu.menu-aberto {
         display: flex;
     }
 
