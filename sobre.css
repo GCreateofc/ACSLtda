@@ -715,7 +715,7 @@ button {
         z-index: 999;
     }
 
-    .menu.menu-aberto {
+    .menu.aberto {
         display: flex;
     }
 
@@ -737,17 +737,23 @@ button {
 
     .menu-mobile {
         display: flex;
+
         position: relative;
+
         width: 44px;
         height: 44px;
+
         align-items: center;
         justify-content: center;
-        border: 1px solid var(--borda);
-        background: var(--branco);
-        color: var(--azul);
-        cursor: pointer;
+
+        background: var(--azul);
+        color: var(--branco);
+
+        border-radius: 5px;
+
         font-size: 18px;
-        z-index: 1001;
+
+        z-index: 10000;
     }
 
     .menu-mobile i {

@@ -11,31 +11,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         menu.classList.toggle("aberto");
 
-        const menuAberto = menu.classList.contains("aberto");
+        const aberto = menu.classList.contains("aberto");
 
         menuMobile.setAttribute(
             "aria-expanded",
-            menuAberto ? "true" : "false"
+            aberto ? "true" : "false"
         );
 
         const icone = menuMobile.querySelector("i");
 
         if (icone) {
-            if (menuAberto) {
-                icone.classList.remove("fa-bars");
-                icone.classList.add("fa-xmark");
-            } else {
-                icone.classList.remove("fa-xmark");
-                icone.classList.add("fa-bars");
-            }
+            icone.classList.toggle("fa-bars", !aberto);
+            icone.classList.toggle("fa-xmark", aberto);
         }
-
     });
 
-    // Fecha o menu ao clicar em algum link
-    const links = menu.querySelectorAll("a");
-
-    links.forEach(function (link) {
+    menu.querySelectorAll("a").forEach(function (link) {
 
         link.addEventListener("click", function () {
 
@@ -52,16 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 icone.classList.remove("fa-xmark");
                 icone.classList.add("fa-bars");
             }
-
         });
 
     });
 
 });
-
-    // ANO AUTOMÁTICO DO FOOTER
-    const ano = document.querySelector(".ano-atual");
-
-    if (ano) {
-        ano.textContent = new Date().getFullYear();
-    }

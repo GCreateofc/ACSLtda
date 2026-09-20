@@ -980,7 +980,7 @@ button {
 
         box-shadow: var(--sombra);
 
-        z-index: 999;
+        z-index: 9999;
     }
 
     .menu.aberto {
@@ -1047,7 +1047,7 @@ button {
 
         font-size: 18px;
 
-        z-index: 1001;
+        z-index: 10000;
     }
 
     .menu-mobile i {
